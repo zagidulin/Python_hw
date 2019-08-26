@@ -27,7 +27,6 @@ def sort_to_max(origin_list):
         x = min(temp_list)
         y = temp_list.index(x)
         origin_list[i], origin_list[y + i] = x, origin_list[i]
-        origin_list = origin_list
         i = i + 1
     sorted_list = print(origin_list)
     return sorted_list
