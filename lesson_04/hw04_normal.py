@@ -123,12 +123,22 @@ print(result_2)
 
 import random
 
-lst = [random.randint(0, 9) for _ in range(2500)]
-lst = ''.join(list(map(lambda x: str(x), lst)))
-print(len(lst))
+number = [random.randint(0, 9) for _ in range(2500)]
+number = ''.join(list(map(lambda x: str(x), number)))
+print(len(number))
 
-my_file = open('Num.txt', 'w', encoding='UTF-8')
-my_file.write(lst)
-my_file.close()
+file = open('Num.txt', 'w', encoding='UTF-8')
+file.write(number)
+file.close()
 
-# остальную часть задания доделаю к следующему уроку
+import re
+
+pattern_3 = r'0{2,}|1{2,}|2{2,}|3{2,}|4{2,}|5{2,}|6{2,}|7{2,}|8{2,}|9{2,}'
+file = open('Num.txt', 'r')
+temp = re.findall(pattern_3, file.read())
+digits = [i for i in temp if len(i) == max([len(i) for i in temp])]
+print(digits)
+print(max([len(i) for i in temp]))
+file.close()
+# посколку по pattern_3 отбирается от 2 одинаковых цифр - {2,} - то можно дополнить
+# код условием, которое будет включаться если не будет 2-х последовательных цифр
