@@ -16,7 +16,14 @@ def create(name):
     except:
         print('{dir_name} уже существует'.format(dir_name = dir_name))
 
+# Когда добавлял в easy кроме определений самих функций их выполнение,
+# то они выполнялись при запуске normal. Поэтому выполнение заданий easy сделал
+# в комментариях:
+# for _ in range(1, 10):
+#    dir = "dir_" + str(_)
+#    create(dir)
 
+# удаление директорий
 def delete(name):
     dir_name = str(name)
     dir_path = os.path.join(os.getcwd(), dir_name)
@@ -26,6 +33,9 @@ def delete(name):
     except FileExistsError:
         print('{dir_name} не найдена'.format(dir_name=dir_name))
 
+# for _ in range(1, 10):
+#    dir = "dir_" + str(_)
+#    delete(dir)
 
 # Задача-2:
 # Напишите скрипт, отображающий папки текущей директории.
@@ -42,8 +52,10 @@ def content(path):
 import shutil
 import sys
 
-def copy_file(f_orig, f_copy):
-    shutil.copy(f_orig, f_copy)
+def copy_file(f_1, f_2):
+    shutil.copy(f_1, f_2)
 
 f_orig = sys.argv[0]
 f_copy = "copy_" + os.path.basename(f_orig)
+
+# copy_file(f_orig, f_copy)
