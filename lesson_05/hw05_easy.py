@@ -1,4 +1,4 @@
-# Задача-1:
+﻿# Задача-1:
 # Напишите скрипт, создающий директории dir_1 - dir_9 в папке,
 # из которой запущен данный скрипт.
 # И второй скрипт, удаляющий эти папки.
@@ -17,7 +17,6 @@ def create(name):
         print('{dir_name} уже существует'.format(dir_name = dir_name))
 
 
-
 def delete(name):
     dir_name = str(name)
     dir_path = os.path.join(os.getcwd(), dir_name)
@@ -26,7 +25,6 @@ def delete(name):
         print('{dir_name} удалена'.format(dir_name=dir_name))
     except FileExistsError:
         print('{dir_name} не найдена'.format(dir_name=dir_name))
-
 
 
 # Задача-2:
