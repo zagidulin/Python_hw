@@ -1,4 +1,6 @@
-﻿import random
+__author__ = 'Загидулин Артур'
+
+import random
 
 class Box:
     def __init__(self):
