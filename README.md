@@ -1,2 +1,2 @@
-# Python_hw
-HomeWork
+# Python_tasks
+Tasks
